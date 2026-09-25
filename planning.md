@@ -15,6 +15,7 @@ def Brute(talks):
 
     Input: List of conferences(talks) of n lengths
     Output: Number of overlapping conferences(talks)
+    constraints: 1 ≤ number of talks or n ≤ 100
 
     overlapping = []
     n = len(talks)
@@ -30,57 +31,10 @@ def Brute(talks):
     return overlapping
 ```
 
+## Purposed Algorithm Strategy
 
+To find the more effective way to book the conferences, we went with a scan-based sorting algorithm. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`pseudocode`
-
-
-You are organizing a conference and are given a list of start and end times for talks. The schedule cannot be changed. As the organizer, you want to reserve as few rooms as possible to save money.
-
-
-Goal: determine the maximum number of overlapping talks from the schedule so you can book the correct number of conference rooms.
-
-
-Input: list of tuples of size two, where each tuple corresponds to a scheduled talk and the entries of the tuple correspond to start time and end time of the talk.
-
-
-Tasks:
-Problem Formulation: Break down the project prompt. Clearly define the input parameters, expected outputs, and constraints.
-input: talks = [(9, 10), (10, 12), (11, 1), (12, 3)] / number of talks
-expected outputs: number of rooms needed minimum in this case 3
-constraints: 1 ≤ number of talks or n ≤ 100
-
-
-
-
-
-
-
-
-
-
-Algorithmic Strategy: Select an appropriate design paradigm (e.g., divide-and-conquer, dynamic programming, greedy). Write detailed pseudocode for your proposed solution.
-sorting and scanning. What approach we use
 
 
 talks = [(9, 10), (10, 12), (11, 13), (12, 3)]
@@ -89,16 +43,16 @@ overs=[]
 rooms = 1 (needed because 1 room always)
 max = 1
     for i in range(1, len(talks)):
-    before_start, before_end = talks[i -1]
-    now_start, now_end = talks[i]
+        before_start, before_end = talks[i -1]
+        now_start, now_end = talks[i]
 
 
-    if now_start < before_end
-    overs.append((talks[i-1], talks[i]))
-    max = rooms + 1
-    return overs
-    else
-    room = 1
+        if now_start < before_end
+            overs.append((talks[i-1], talks[i]))
+            max = rooms + 1
+            return overs
+        else
+         room = 1
 
 
 return rooms, return overs
