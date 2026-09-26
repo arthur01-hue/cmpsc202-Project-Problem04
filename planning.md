@@ -33,15 +33,14 @@ def Brute(talks):
 
 ## Purposed Algorithm Strategy
 
-To find the more effective way to book the conferences, we went with a scan-based sorting algorithm. 
+To find the more effective way to book the conferences, we went with a scan-based sorting algorithm. We start it by having it in accending order, then takes the current conference and checks to see if there are others that may overlap with this one, keeping track using the previous most used room with the next. 
 
 
-
-talks = [(9, 10), (10, 12), (11, 13), (12, 3)]
 def whatever(talks)
-overs=[]
-rooms = 1 (needed because 1 room always)
-max = 1
+    overs=[]
+    rooms = 1 (needed because 1 room always)
+    max = 1
+
     for i in range(1, len(talks)):
         before_start, before_end = talks[i -1]
         now_start, now_end = talks[i]
@@ -51,8 +50,8 @@ max = 1
             overs.append((talks[i-1], talks[i]))
             max = rooms + 1
             return overs
-        else
-         room = 1
+            else
+            room = 1
 
-
-return rooms, return overs
+    return rooms, return overs
+```
