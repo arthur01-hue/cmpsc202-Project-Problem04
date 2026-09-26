@@ -35,7 +35,7 @@ def Brute(talks):
 
 To find the more effective way to book the conferences, we went with a scan-based sorting algorithm. We start it by having it in accending order, then takes the current conference and checks to see if there are others that may overlap with this one, keeping track using the previous most used room with the next. 
 
-
+```text
 def whatever(talks)
     overs=[]
     rooms = 1 (needed because 1 room always)
@@ -46,12 +46,16 @@ def whatever(talks)
         now_start, now_end = talks[i]
 
 
-        if now_start < before_end
+        if now_start < before_end:
             overs.append((talks[i-1], talks[i]))
             max = rooms + 1
             return overs
-            else
+        else:
             room = 1
 
     return rooms, return overs
 ```
+
+## Complexity Analysis
+
+We find that our approach is a slight improvement over our baseline in theory, with our baseline our worst-case running time would be {O}(n^3), as if every case is true it would iterate through the entire conference list. For our sorting and scanning algorithm the worst case run time would be {O}(n^2). This moves our algorithm from cubic time to quadratic time. Our purposed algorithm cuts down the comparisons from every single conference time to each other. 

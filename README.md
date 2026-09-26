@@ -7,4 +7,4 @@ This project focuses on developing and comparing algorithms to find a way to boo
 
 See [planning document](planning.md) for details.
 
-Project Team: Lynsey A., Francesca H., Drijion
+Project Team: Lynsey A., Francesca H., Drijion (We tried)
